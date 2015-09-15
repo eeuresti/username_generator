@@ -13,8 +13,13 @@ def format_name(first, last)
 end
 
 
-def format_year
-  nil
+def format_year(my_year)
+  my_year = my_year.to_s
+  if my_year.length != 4
+    return nil
+  end
+  my_year = my_year.split(//, 3)
+  my_year = my_year[2]
 end
 
 def build_username
