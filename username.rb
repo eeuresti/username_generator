@@ -22,6 +22,9 @@ def format_year(my_year)
   my_year = my_year[2]
 end
 
-def build_username
-  nil
+def build_username(first, last, year, user_type=0)
+  type_array = ["", "seller-", "manager-", "admin-"]
+  username = format_name(first, last)
+  username = username + format_year(year)
+  return username = type_array[user_type] + username
 end
