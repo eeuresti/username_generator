@@ -8,7 +8,8 @@ def format_name(first, last)
   new_first = first.gsub(/\W+/,"")
   new_last = last.gsub(/\W+/,"")
   username = new_first[0] + new_last
-  username = username.downcase
+  username = username.downcase.gsub(/\d/,"")
+
 end
 
 
