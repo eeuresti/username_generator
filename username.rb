@@ -31,16 +31,16 @@ end
 
 
 
-  usernames = {}
+  $usernames = {}
 def generate_username(first_name, last_name, birth_year, privilege_level=0)
   new_username = build_username(first_name, last_name, birth_year, privilege_level)
 
-  if usernames[new_username] == nil
-    usernames[new_username] = 0
+  if $usernames[new_username] == nil
+    $usernames[new_username] = 0
     return new_username
   else
-    usernames[new_username] += 1
-    new_username = new_username + "_" + usernames[new_username].to_s
+    $usernames[new_username] += 1
+    new_username = new_username + "_" + $usernames[new_username].to_s
     return new_username
   end
   # usernames.index(new_username)
